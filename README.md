@@ -15,8 +15,8 @@
 
 This project builds a machine learning system that predicts whether a Formula 1 driver will **pit on the next lap**, using structured lap-level race data. Pit stop timing is one of the most strategically critical decisions in F1 — balancing tyre degradation, track position, and under/overcut opportunities.
 
-Two models are implemented **from scratch in NumPy** (no ML libraries):
-- **Logistic Regression** with L2 regularization (λ tuning via time-series cross-validation)
+Two models are implemented **from scratch in NumPy**:
+- **Logistic Regression** with L2 regularization (λ tuned on 2024 validation fold)
 - **ANN** — 1 hidden layer (16 → 128 → 1, ReLU + Sigmoid, He initialization)
 
 **Best model:** ANN with tuned threshold (t = 0.2418) → **Test F1 = 0.6263** on 2025 season hold-out.
